@@ -74,7 +74,7 @@ def threshold_otsu(gray_img, nbins=.1):
     binary_np_gray_img = 1.0 * (gray_img > least_variance_threshold)
     ixplot = plt.imshow(binary_np_gray_img,cmap='gray') 
     plt.axis('off')
-    plt.title(" Threshold = " + str(least_variance_threshold))
+    plt.title(" Otsu Thresholding Image with Threshold = " + str(least_variance_threshold))
     plt.savefig(path + name + '_T' + str(least_variance_threshold) + "." + ext)
 
     return least_variance_threshold
