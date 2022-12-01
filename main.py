@@ -127,10 +127,10 @@ def main():
                     st.write("#### Least Variance can be achieved between object and background clases for given Image after Iterations at a threshold of : ",o_threshold)
                     path = os.getcwd() + "/tempDir/ostu" 
                     images = glob.glob(os.path.join(path, '*'))
-                    caption = ["Otsu Thresholding Image","Grey Scaled Image"] # your caption here
+                    #caption = ["Otsu Thresholding Image","Grey Scaled Image"] # your caption here
                     cols = cycle(st.columns(2)) # st.columns here since it is out of beta at the time I'm writing this
                     for idx, filteredImage in enumerate(images):
-                        next(cols).image(filteredImage, width=380, caption=caption[idx])
+                        next(cols).image(filteredImage, width=380) #, caption=caption[idx])
                     #st.image(images, use_column_width=True, caption=["Otsu Thresholding Image","Grey Scaled Image"])
                 elif params['option'] == "Image Binarization":
                     b_threshold = segmentation.threshold_binary(img_path,params['Threshold'])
