@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # pandas display options
 pd.set_option('display.max_colwidth', None)
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
